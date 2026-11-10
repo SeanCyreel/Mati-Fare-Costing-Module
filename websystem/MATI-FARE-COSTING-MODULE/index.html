@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mati Fare Management System - a local passenger fare and transaction tracker for Mati City, Davao Oriental.">
+  <title>Mati Fare Management System</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/controller.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Mati Fare Management System home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>
+        <strong>Mati Fare Management</strong>
+        <small>Passenger transaction tracker</small>
+      </span>
+    </a>
+    <div class="location-pill">
+      <span class="location-dot" aria-hidden="true"></span>
+      <span>Mati City, Davao Oriental</span>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">LOCAL TRANSPORTATION TOOL</p>
+        <h1>Fare and transaction overview</h1>
+        <p class="welcome-copy">Calculate passenger totals and keep a simple record of daily fare transactions within Mati City, Davao Oriental.</p>
+      </div>
+      <div class="date-card">
+        <span class="date-label">SERVICE AREA</span>
+        <strong>Mati City</strong>
+        <span>Davao Oriental</span>
+      </div>
+    </section>
+
+    <section class="summary-grid" aria-label="Daily summary">
+      <article class="summary-card">
+        <span class="summary-icon green">₱</span>
+        <div><p>Total collections</p><strong id="total-collections">₱0.00</strong><small>Saved transactions</small></div>
+      </article>
+      <article class="summary-card">
+        <span class="summary-icon red">▤</span>
+        <div><p>Transactions</p><strong id="total-transactions">0</strong><small>Recorded entries</small></div>
+      </article>
+      <article class="summary-card">
+        <span class="summary-icon dark">♙</span>
+        <div><p>Passengers</p><strong id="total-passengers">0</strong><small>Total passenger count</small></div>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <div class="main-column">
+        <section class="panel" aria-labelledby="calculator-heading">
+          <div class="panel-heading">
+            <div><p class="eyebrow">POINT-TO-POINT PRICING</p><h2 id="calculator-heading">Route fare calculator</h2></div>
+            <span class="panel-tag">Calculate</span>
+          </div>
+          <div id="fare-calculator" class="panel-content"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="transactions-heading">
+          <div class="panel-heading">
+            <div><p class="eyebrow">RECORDS</p><h2 id="transactions-heading">Passenger transactions</h2></div>
+            <span class="panel-tag">Local records</span>
+          </div>
+          <div id="transactions" class="panel-content"></div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="panel" aria-labelledby="summary-heading">
+          <div class="panel-heading">
+            <div><p class="eyebrow">AT A GLANCE</p><h2 id="summary-heading">Daily summary</h2></div>
+          </div>
+          <div id="daily-summary" class="panel-content"></div>
+        </section>
+        <section class="notice-card">
+          <span class="notice-symbol">i</span>
+          <div>
+            <strong>Fare information</strong>
+            <p>The displayed tier table is an editable project fare guide, not a verified official government fare matrix. Confirm applicable rates before use.</p>
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Mati Fare Management System</span>
+      <span>Service area: Mati City, Davao Oriental only</span>
+    </footer>
+  </main>
+</body>
+</html>
